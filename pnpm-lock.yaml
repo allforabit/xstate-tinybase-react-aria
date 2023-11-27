@@ -26,6 +26,9 @@ dependencies:
   tailwindcss-react-aria-components:
     specifier: 1.0.0-beta.1
     version: 1.0.0-beta.1(tailwindcss@3.3.5)
+  tinybase:
+    specifier: ^4.5.3
+    version: 4.5.3(react-dom@18.2.0)(react@18.2.0)
   use-debounce:
     specifier: ^10.0.0
     version: 10.0.0(react@18.2.0)
@@ -2322,6 +2325,46 @@ packages:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
     dependencies:
       any-promise: 1.3.0
+
+  /tinybase@4.5.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-DZrWvIANl9YQVXH4vH41ILn1Hq0EuUs7nef25v7jlJDvLswuSAHI9+zhPtFQrzpf6cN+KuHjsciuvBIuhKxaiA==}
+    hasBin: true
+    peerDependencies:
+      '@sqlite.org/sqlite-wasm': ^3.44.1-build2
+      '@vlcn.io/crsqlite-wasm': ^0.15.2
+      automerge-repo: ^0.1.0
+      partykit: ^0.0.39
+      partysocket: ^0.0.16
+      prettier: ^3.0.3
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      sqlite3: ^5.1.6
+      yjs: ^13.6.10
+    peerDependenciesMeta:
+      '@sqlite.org/sqlite-wasm':
+        optional: true
+      '@vlcn.io/crsqlite-wasm':
+        optional: true
+      automerge-repo:
+        optional: true
+      partykit:
+        optional: true
+      partysocket:
+        optional: true
+      prettier:
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      sqlite3:
+        optional: true
+      yjs:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}

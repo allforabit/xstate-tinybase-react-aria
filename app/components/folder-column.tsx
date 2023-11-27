@@ -1,9 +1,16 @@
+'use client'
 import Link from 'next/link';
 import { getFoldersWithEmailCount } from '@/app/db/queries';
 import { FlagIcon } from '@/app/icons/flag';
 import { FolderIcon } from '@/app/icons/folder';
 import { InboxIcon } from '@/app/icons/inbox';
 import { SentIcon } from '@/app/icons/sent';
+import {createStore} from 'tinybase';
+import {CellView} from 'tinybase/ui-react';
+
+
+const store = createStore();
+store.setCell('t1', 'r1', 'c1', 'Hello World');
 
 export async function FolderColumn() {
   const { specialFolders, otherFolders } = await getFoldersWithEmailCount();
@@ -34,6 +41,7 @@ export async function FolderColumn() {
           </Link>
         ))}
       </ul>
+      <CellView store={store} tableId="t1" rowId="r1" cellId="c1" />,
       <hr className="my-4 border-gray-200 dark:border-gray-800" />
       <ul className="divide-y divide-gray-200 dark:divide-gray-800">
         {otherFolders.map((folder, index) => (
